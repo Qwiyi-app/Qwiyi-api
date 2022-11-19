@@ -10,30 +10,19 @@ from fastapi.middleware.cors import CORSMiddleware
 from auth.token import auth_route
 
 tags_metadata = [
-    # {
-    #     "name" : "users",
-    #     "description" : "Users Crud Operation"
-    # },
-    # {
-    #     "name" : "tips",
-    #     "description" : "Medical tips for visitors"
-    # },
-    # {
-    #     "name" : "categories",
-    #     "description" : "Article Categories"
-    # },
+    
     {
         "name" : "auth",
-        "description" : "Users Crud Operation",
+        "description" : "Users authentication Operation",
         "externalDocs" : {
-            "description" : "Manage items",
+            "description" : "Manage authentication",
             "url" : "https://qwiyi.com",
         }
     }
 ]
 
 description = """
-Qwiyi Blog api for managing articles
+Qwiyi api for app
 """
 
 app = FastAPI(
@@ -57,7 +46,7 @@ app = FastAPI(
 
 
 # app.include_router(users_routes)
-# # app.include_router(auth_routes)
+app.include_router(auth_route)
 # app.include_router(apply)
 # app.include_router(tips_routes)
 # app.include_router(categories_routes)
