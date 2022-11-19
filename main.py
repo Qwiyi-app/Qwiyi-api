@@ -7,48 +7,48 @@ from fastapi.middleware.cors import CORSMiddleware
 # from tips.routes import tips_routes
 # from categories.routes import categories_routes
 # from articles.routes import articles_routes
-# from auth.oauth2 import apply
+from auth.token import auth_route
 
-# tags_metadata = [
-#     {
-#         "name" : "users",
-#         "description" : "Users Crud Operation"
-#     },
-#     {
-#         "name" : "tips",
-#         "description" : "Medical tips for visitors"
-#     },
-#     {
-#         "name" : "categories",
-#         "description" : "Article Categories"
-#     },
-#     {
-#         "name" : "auth",
-#         "description" : "Users Crud Operation",
-#         "externalDocs" : {
-#             "description" : "Manage items",
-#             "url" : "https://medicsniche.com",
-#         }
-#     }
-# ]
+tags_metadata = [
+    # {
+    #     "name" : "users",
+    #     "description" : "Users Crud Operation"
+    # },
+    # {
+    #     "name" : "tips",
+    #     "description" : "Medical tips for visitors"
+    # },
+    # {
+    #     "name" : "categories",
+    #     "description" : "Article Categories"
+    # },
+    {
+        "name" : "auth",
+        "description" : "Users Crud Operation",
+        "externalDocs" : {
+            "description" : "Manage items",
+            "url" : "https://qwiyi.com",
+        }
+    }
+]
 
-# description = """
-# MedicsNiche Blog api for managing articles
-# """
+description = """
+Qwiyi Blog api for managing articles
+"""
 
 app = FastAPI(
-    title="MedicsNiche Blog",
+    title="Qwiyi App",
     description =description,
     version = "0.0.1",
-    terms_of_service = "https://medicsniche.com",
+    terms_of_service = "https://qwiyi.com",
     contact = {
-        "name" : "MedicsNiche Ltd",
-        "url" : "https://medicsniche.com",
-        "email" : "info@medicsniche.com",
+        "name" : "qwiyi Ltd",
+        "url" : "https://qwiyi.com",
+        "email" : "info@qwiyi.com",
     },
     license_info = {
         "name": "Apache 2.0",
-        "url" : "https://medicsniche.com"
+        "url" : "https://qwiyi.com"
     },
     openapi_tags = tags_metadata,
     docs_url="/documentation", 
