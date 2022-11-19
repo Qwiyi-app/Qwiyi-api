@@ -5,6 +5,17 @@ name = "pypi"
 
 [packages]
 fastapi = "*"
+sqlalchemy = "*"
+alembic = "*"
+psycopg2 = "*"
+python-jose = "*"
+python-multipart = "*"
+uvicorn = "*"
+bcrypt = "*"
+passlib = "*"
+python-dotenv = "*"
+aiofiles = "*"
+fastapi-mail = "*"
 
 [dev-packages]
 
