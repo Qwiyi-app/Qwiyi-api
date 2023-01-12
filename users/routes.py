@@ -8,8 +8,8 @@ import shutil
 # import aiofiles
 from users.helpers import create_user, get_all_users, get_user, get_user_by_username, delete_user, update_user, update_profile_photo, get_all_users_paginated
 from users.schema import UserBase, UserDisplay
-from database.db import get_db
-from auth.oauth2 import get_current_user
+from config.db import get_db
+from auth.token import get_current_user
 from fastapi_pagination import Page, LimitOffsetPage, paginate, add_pagination
 
 tags_metadata = [
