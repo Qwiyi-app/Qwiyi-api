@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # from auth.authentication import auth_routes
-# from users.routes import users_routes
+from users.routes import users_routes
 # from tips.routes import tips_routes
 # from categories.routes import categories_routes
 # from articles.routes import articles_routes
@@ -44,7 +44,7 @@ app = FastAPI(
 )
 
 
-# app.include_router(users_routes)
+app.include_router(users_routes)
 app.include_router(auth_route)
 # app.include_router(apply)
 # app.include_router(tips_routes)
